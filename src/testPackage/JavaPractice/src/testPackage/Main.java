@@ -64,15 +64,31 @@ public class Main {
 		 Static member1 = new Static ("Megan", "Fox");
 		 Static member2 = new Static ("Natalie", "Portman");
 		 Static member3 = new Static ("Jamie", "Blunt");
+		 
 		 System.out.println(member1.getFirstName());
 		 System.out.println(member1.getLastName());
 		 // Accessing static variable through member1
 		 System.out.println("The total number of members is " + member1.getMembers());
+		 
 		 // Accessing static variable through 
 		 System.out.println("Accessing static variable without a member variable, \n"
 				 + "using only the class name and method name: Static.getMembers()\n" 
 				 	+ Static.getMembers());
-	}
+
+		 // 7) =====================================
+		 // See class Final
+		 // Create a Final object and initialize the final int to 10
+		 Final finalObject = new Final(10);
+		 
+		 for (int i=0; i<5;i++){
+			 finalObject.add();
+			 System.out.printf("Sum after adding: %s\n", finalObject.toString());
+		 }
+	 
+	 
+	 
+	 } // End of Main activity
+	 
 	 
 // 1)  Adding 5 to each element in array and printing it
 	 public static void change (int[] x){
