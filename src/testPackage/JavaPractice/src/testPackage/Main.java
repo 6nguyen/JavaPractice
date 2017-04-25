@@ -60,8 +60,18 @@ public class Main {
 		 }
 		 
 		 //6) =================================
-		 
-		 
+		 //See class Static.java
+		 Static member1 = new Static ("Megan", "Fox");
+		 Static member2 = new Static ("Natalie", "Portman");
+		 Static member3 = new Static ("Jamie", "Blunt");
+		 System.out.println(member1.getFirstName());
+		 System.out.println(member1.getLastName());
+		 // Accessing static variable through member1
+		 System.out.println("The total number of members is " + member1.getMembers());
+		 // Accessing static variable through 
+		 System.out.println("Accessing static variable without a member variable, \n"
+				 + "using only the class name and method name: Static.getMembers()\n" 
+				 	+ Static.getMembers());
 	}
 	 
 // 1)  Adding 5 to each element in array and printing it
