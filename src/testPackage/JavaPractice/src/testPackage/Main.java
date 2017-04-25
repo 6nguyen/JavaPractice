@@ -2,6 +2,7 @@ package testPackage;
 
 import java.util.EnumSet;
 import javax.swing.JOptionPane;
+import javax.swing.JFrame;
 
 public class Main {
 
@@ -88,6 +89,7 @@ public class Main {
 			 System.out.printf("Sum after adding: %s\n", finalObject);
 		 }
 		 
+		 
 		 //8 =======================================
 		 // GUI that prompts for input twice, then returns a number
 		 // must import javax.swing.jOptionPane;
@@ -110,6 +112,17 @@ public class Main {
 				 "The sum of " + firstNum + " and " + secondNum + " is: " + sum,
 				 "Sum",
 				 JOptionPane.PLAIN_MESSAGE);
+		 
+		 
+		 //9 =========================================
+		 // JFrame gives programs basic Windows features, layout, etc.
+		 // See JFrameGUI class
+		 // must import javax.swing.JFrame;
+		 JFrameGUI window = new JFrameGUI();
+		 // must set default close, tells the program to exit on clicking [x]
+		 window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		 window.setSize(500,380);
+		 window.setVisible(true);
 	 
 	 
 	 
