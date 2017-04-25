@@ -1,6 +1,7 @@
 package testPackage;
 
 import java.util.EnumSet;
+import javax.swing.JOptionPane;
 
 public class Main {
 
@@ -86,6 +87,29 @@ public class Main {
 			 // here is actually equivalent to finalObject.toString()
 			 System.out.printf("Sum after adding: %s\n", finalObject);
 		 }
+		 
+		 //8 =======================================
+		 // GUI that prompts for input twice, then returns a number
+		 // must import javax.swing.jOptionPane;
+		 String firstNum = JOptionPane.showInputDialog("Enter first number to add.");
+		 String secondNum = JOptionPane.showInputDialog("Enter second number to add.");
+		 
+		 // converting String input into int
+		 int num1 = Integer.parseInt(firstNum);
+		 int num2 = Integer.parseInt(secondNum);
+		 int sum = num1+num2;
+		 
+		 // GUI display to show sum
+		 // takes 4 params
+		 // 1) null centers the display box in the comp screen
+		 // 2) the message
+		 // 3) the title of the display box
+		 // 4) the icon that pops up on the GUI, PLAIN_MESSAGE is blank
+		 JOptionPane.showMessageDialog(
+				 null, 
+				 "The sum of " + firstNum + " and " + secondNum + " is: " + sum,
+				 "Sum",
+				 JOptionPane.PLAIN_MESSAGE);
 	 
 	 
 	 
