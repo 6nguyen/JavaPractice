@@ -82,7 +82,9 @@ public class Main {
 		 
 		 for (int i=0; i<5;i++){
 			 finalObject.add();
-			 System.out.printf("Sum after adding: %s\n", finalObject.toString());
+			 // Since Final class has a toString method, the finalObject reference
+			 // here is actually equivalent to finalObject.toString()
+			 System.out.printf("Sum after adding: %s\n", finalObject);
 		 }
 	 
 	 
