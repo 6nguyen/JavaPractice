@@ -1,0 +1,90 @@
+import java.util.Iterator;
+import java.util.Stack;
+
+public class StackPractice {
+
+	public static void main(String[] args) {
+
+		// pushing, popping, and peeking a stack
+		Stack myStack = new Stack();
+		
+		myStack.push("Something");
+		myStack.push(2);
+		myStack.push(44);
+		System.out.println(myStack.peek());
+		myStack.push("Hello");
+		myStack.push("I'm the top element, and I was just popped!");
+		System.out.println(myStack.pop());
+		System.out.println(myStack.peek());
+		
+		
+		// reverse a string with a stack
+		System.out.print("\nReverse a string with a stack: ");
+		reverseString("I am a rabbit.");
+		reverseString("Hello, how are you doing today?");
+		
+		
+		// check for balanced parentheses in expression
+		System.out.println();
+		String expression1 = "[(23 * 22) * (21 - 1)] + {s}";
+		String expression2 = "{(This should not work)]";
+		System.out.println(expression1 + ": " + isBalanced(expression1));
+		System.out.println(expression2 + ": " + isBalanced(expression2));
+		
+		
+		// END OF MAIN
+	}
+
+	
+	// reverse a string using a stack
+	public static void reverseString(String str){
+		Stack stack = new Stack();
+		
+		for(int i=0; i<str.length(); i++){
+			stack.push(str.charAt(i));
+		}
+		
+		System.out.println();
+		Iterator itr = stack.iterator();
+		while(itr.hasNext()){
+			System.out.print(stack.pop());
+		}
+	}
+	
+	
+	// check for balanced parentheses in an expression
+	public static boolean isBalanced(String str) {
+		Stack myStack = new Stack();
+		
+		for(int i = 0; i<str.length(); i++){
+			switch(str.charAt(i)){
+			case '{':
+			case '[':
+			case '(':
+				myStack.push(str.charAt(i));
+				break;
+			case '}':
+				if (myStack.peek().equals('{')){
+					myStack.pop();
+				}
+				break;
+			case ']':
+				if (myStack.peek().equals('[')){
+					myStack.pop();
+				}
+				break;
+			case ')':
+				if (myStack.peek().equals('(')){
+					myStack.pop();
+				}
+				break;
+			default:
+				return false;
+			}
+		}
+		
+		return true;
+	}
+	
+	// END OF FILE
+}

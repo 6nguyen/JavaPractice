@@ -1,0 +1,19 @@
+import java.util.Stack;
+
+public class StackPractice {
+
+	public static void main(String[] args) {
+
+		// reverse a string with a stack
+		Stack myStack = new Stack();
+		
+		myStack.push("Something");
+		myStack.push(2);
+		System.out.println(myStack.peek());
+	}
+
+	
+	// reverse a string using a stack
+	Stack stack = new Stack();
+	
+}

@@ -1,0 +1,39 @@
+import java.util.*;
+
+public class LinkedListPractice {
+
+	public static void main(String[] args) {
+
+		LinkedList<String> inventory = new LinkedList<>();
+		
+		// Add to LinkedList
+		inventory.add("Wooden Shield");
+		inventory.add("Leather Boots");
+		inventory.addFirst("Leather Cap");
+		inventory.addLast("Aluminum Gauntlet");
+		inventory.add("Oak Staff");
+		inventory.add("Bag of Dirt");
+		inventory.add("Rabbit Paw");
+		inventory.add("Fine Sand");
+		
+		
+
+		
+		
+		inventory.remove("Bag of Dirt");
+		System.out.println("Removed from inventory: " + inventory.removeLast());
+		
+		
+		// END OF MAIN
+	}
+	
+	// Print everything in LinkedList
+	public void printList(List list){
+		System.out.println("Inventory: ");
+		Iterator<String> itr = list.iterator();
+		while(itr.hasNext()){
+			System.out.println(itr.next());
+		}
+	}
+
+}

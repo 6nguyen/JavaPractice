@@ -1,0 +1,31 @@
+import java.util.Iterator;
+import java.util.Stack;
+
+public class StackPractice {
+
+	public static void main(String[] args) {
+
+		// reverse a string with a stack
+		Stack myStack = new Stack();
+		
+		myStack.push("Something");
+		myStack.push(2);
+		System.out.println(myStack.peek());
+		
+		reverseString("I am a rabbit.");
+	}
+
+	
+	// reverse a string using a stack
+	public static void reverseString(String str){
+		Stack stack = new Stack();
+		for(int i=0; i<str.length(); i++){
+			stack.push(str.charAt(i));
+		}
+		Iterator itr = stack.iterator();
+		while(itr.hasNext()){
+			System.out.println(stack.pop());
+		}
+	}
+	
+}

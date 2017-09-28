@@ -1,0 +1,23 @@
+package testPackage;
+
+public class Lesson1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int i = 0;
+		for (;;)
+			System.out.println(i);
+		
+		
+//		7
+//		for (int val = 21; val >= 0; val--) {
+//			if (val % 3 == 0)
+//				System.out.print(val + " ");
+//			if (val % 5 == 0)
+//				System.out.println();
+//		}
+//		
+
+	}
+
+}

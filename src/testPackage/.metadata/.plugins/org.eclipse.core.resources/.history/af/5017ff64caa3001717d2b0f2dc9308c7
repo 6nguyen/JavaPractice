@@ -1,0 +1,13 @@
+import java.util.*;
+
+public class LinkedListPractice {
+
+	public static void main(String[] args) {
+
+		LinkedList<String> myList = new LinkedList<>();
+		
+		myList.add("Wooden Shield");
+		myList.add("Leather Boots");
+	}
+
+}

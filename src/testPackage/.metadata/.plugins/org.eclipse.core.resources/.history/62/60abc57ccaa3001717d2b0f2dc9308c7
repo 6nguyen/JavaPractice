@@ -1,0 +1,16 @@
+import java.util.*;
+
+public class LinkedListPractice {
+
+	public static void main(String[] args) {
+
+		LinkedList<String> inventory = new LinkedList<>();
+		
+		inventory.add("Wooden Shield");
+		inventory.add("Leather Boots");
+		inventory.addFirst("Leather Cap");
+		inventory.addLast("Aluminum Gauntlet");
+		inventory.add("Oak Staff");
+	}
+
+}

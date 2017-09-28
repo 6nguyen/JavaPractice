@@ -1,0 +1,38 @@
+import java.util.Iterator;
+import java.util.Stack;
+
+public class StackPractice {
+
+	public static void main(String[] args) {
+
+		// pushing, popping, and peeking a stack
+		Stack myStack = new Stack();
+		
+		myStack.push("Something");
+		myStack.push(2);
+		myStack.push(44);
+		System.out.println(myStack.peek());
+		myStack.push("Hello");
+		myStack.push("I'm the top element, and I was just popped!");
+		System.out.println(myStack.pop());
+		System.out.println(myStack.peek());
+		
+		// reverse a string with a stack
+		System.out.println("\nReverse a string with a stack");
+		reverseString("I am a rabbit.");
+	}
+
+	
+	// reverse a string using a stack
+	public static void reverseString(String str){
+		Stack stack = new Stack();
+		for(int i=0; i<str.length(); i++){
+			stack.push(str.charAt(i));
+		}
+		Iterator itr = stack.iterator();
+		while(itr.hasNext()){
+			System.out.print(stack.pop());
+		}
+	}
+	
+}
